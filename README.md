@@ -32,9 +32,6 @@
 - **AI SEO 분석 도구:** [https://u-li.net/analysis.md](https://u-li.net/analysis.md)
 - **고객 문의 (Contact):** [https://u-li.net/contact.md](https://u-li.net/contact.md)
 
-### 4. 전체 데이터셋 (Full Dataset)
-- **JSON Source:** [https://u-li.net/wp-content/uploads/2025/2025-11-29-WP.json](https://u-li.net/wp-content/uploads/2025/2025-11-29-WP.json)
-
 ---
 
 ## 🛠 Services & Solutions
