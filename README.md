@@ -27,7 +27,7 @@
 - **이용약관 & 개인정보:** [https://u-li.net/policy.md](https://u-li.net/policy.md)
 
 ### 3. 지식 정보 & 도구 (Tools & FAQ)
-- **자주 묻는 질문 (FAQ):** [https://u-li.net/faq.md](https://u-li.net/faq.md)
+- **자주 묻는 질문 (FAQ):** [https://u-li.net/contact/faq/](https://u-li.net/contact/faq/)
   - AEO/SEO 효과, 비용, 절차 Q&A.
 - **AI SEO 분석 도구:** [https://u-li.net/analysis.md](https://u-li.net/analysis.md)
 - **고객 문의 (Contact):** [https://u-li.net/contact.md](https://u-li.net/contact.md)
