@@ -13,6 +13,11 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://u-li.net">
     
+    <!-- Fonts (Noto Sans KR 추가) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://u-li.net">
@@ -27,125 +32,137 @@
     <meta property="twitter:description" content="차세대 마케팅 최적화 전문 기업 ULION. SEO, AEO, GEO를 통합한 AI 기반 마케팅 컨설팅 및 자동화 솔루션을 제공합니다.">
     <meta property="twitter:image" content="https://u-li.net/og-image.jpg">
     
-    <!-- Schema.org Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "ULION",
-        "url": "https://u-li.net",
-        "logo": "https://u-li.net/logo.png",
-        "description": "SEO, AEO, GEO 마케팅 컨설팅 및 AI 자동화 솔루션 전문 기업",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "KR"
-        },
-        "sameAs": [
-            "https://u-li.net"
-        ],
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "Customer Service",
-            "availableLanguage": ["Korean", "English"]
-        }
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "ULION",
-        "url": "https://u-li.net",
-        "description": "SEO, AEO, GEO 마케팅 컨설팅 및 AI 자동화 솔루션",
-        "serviceType": ["SEO Consulting", "AEO Optimization", "GEO Strategy", "AI Marketing Automation"],
-        "areaServed": {
-            "@type": "Country",
-            "name": "South Korea"
-        },
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Services",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "SEO (Search Engine Optimization)",
-                        "description": "검색엔진 최적화 컨설팅, 키워드 리서치, 기술적 SEO 감사"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "AEO (Answer Engine Optimization)",
-                        "description": "AI 어시스턴트 최적화, Featured Snippet 최적화, 음성 검색 최적화"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "GEO (Generative Engine Optimization)",
-                        "description": "ChatGPT, Claude, Gemini 등 LLM 최적화, AI 생성 검색 결과 최적화"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "AI Automation Solutions",
-                        "description": "AI 기반 마케팅 자동화, 자동화된 콘텐츠 분석 및 리포팅"
-                    }
-                }
-            ]
-        }
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
+        "@graph": [
             {
-                "@type": "Question",
-                "name": "ULION은 어떤 서비스를 제공하나요?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "ULION은 SEO(검색엔진 최적화), AEO(Answer Engine Optimization), GEO(Generative Engine Optimization)를 통합한 마케팅 컨설팅 서비스와 AI 기반 마케팅 자동화 솔루션을 제공합니다."
+                "@type": "Organization",
+                "@id": "https://u-li.net/#organization",
+                "name": "ULION",
+                "url": "https://u-li.net",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://u-li.net/logo.png"
+                },
+                "description": "SEO, AEO, GEO 마케팅 컨설팅 및 AI 자동화 솔루션 전문 기업",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "KR"
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "Customer Service",
+                    "availableLanguage": ["Korean", "English"]
+                },
+                "sameAs": [
+                    "https://u-li.net"
+                ]
+            },
+            {
+                "@type": "ProfessionalService",
+                "@id": "https://u-li.net/#service",
+                "name": "ULION Services",
+                "url": "https://u-li.net",
+                "description": "SEO, AEO, GEO 마케팅 컨설팅 및 AI 자동화 솔루션",
+                "provider": {
+                    "@id": "https://u-li.net/#organization"
+                },
+                "serviceType": ["SEO Consulting", "AEO Optimization", "GEO Strategy", "AI Marketing Automation"],
+                "areaServed": {
+                    "@type": "Country",
+                    "name": "South Korea"
+                },
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Digital Marketing Services",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "SEO (Search Engine Optimization)",
+                                "description": "검색엔진 최적화 컨설팅, 키워드 리서치, 기술적 SEO 감사"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "AEO (Answer Engine Optimization)",
+                                "description": "AI 어시스턴트 최적화, Featured Snippet 최적화, 음성 검색 최적화"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "GEO (Generative Engine Optimization)",
+                                "description": "ChatGPT, Claude, Gemini 등 LLM 최적화, AI 생성 검색 결과 최적화"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "AI Automation Solutions",
+                                "description": "AI 기반 마케팅 자동화, 자동화된 콘텐츠 분석 및 리포팅"
+                            }
+                        }
+                    ]
                 }
             },
             {
-                "@type": "Question",
-                "name": "AEO와 GEO는 무엇인가요?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "AEO(Answer Engine Optimization)는 AI 어시스턴트와 음성 검색에 최적화하는 전략입니다. GEO(Generative Engine Optimization)는 ChatGPT, Claude, Gemini 같은 생성형 AI 모델에서 귀사의 콘텐츠가 인용되고 참조되도록 최적화하는 차세대 전략입니다."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "왜 전통적인 SEO만으로는 부족한가요?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "2025년 현재, 음성 검색과 AI 기반 검색 엔진(ChatGPT, Perplexity 등)이 급성장하고 있습니다. 전통적 SEO만으로는 AI 어시스턴트와 생성형 검색 엔진에서의 가시성을 확보할 수 없습니다."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "ULION의 AI 자동화 솔루션은 무엇을 포함하나요?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "AI 기반 콘텐츠 분석, 자동화된 경쟁사 분석, 실시간 성과 리포팅, 프롬프트 엔지니어링 컨설팅, AI 도구 통합 및 마케팅 워크플로우 최적화를 포함합니다."
-                }
+                "@type": "FAQPage",
+                "@id": "https://u-li.net/#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "ULION은 어떤 서비스를 제공하나요?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "ULION은 SEO(검색엔진 최적화), AEO(Answer Engine Optimization), GEO(Generative Engine Optimization)를 통합한 마케팅 컨설팅 서비스와 AI 기반 마케팅 자동화 솔루션을 제공합니다."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "AEO와 GEO는 무엇인가요?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "AEO(Answer Engine Optimization)는 AI 어시스턴트와 음성 검색에 최적화하는 전략입니다. GEO(Generative Engine Optimization)는 ChatGPT, Claude, Gemini 같은 생성형 AI 모델에서 귀사의 콘텐츠가 인용되고 참조되도록 최적화하는 차세대 전략입니다."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "왜 전통적인 SEO만으로는 부족한가요?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "2025년 현재, 음성 검색과 AI 기반 검색 엔진(ChatGPT, Perplexity 등)이 급성장하고 있습니다. 전통적 SEO만으로는 AI 어시스턴트와 생성형 검색 엔진에서의 가시성을 확보할 수 없습니다."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "ULION의 AI 자동화 솔루션은 무엇을 포함하나요?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "AI 기반 콘텐츠 분석, 자동화된 경쟁사 분석, 실시간 성과 리포팅, 프롬프트 엔지니어링 컨설팅, AI 도구 통합 및 마케팅 워크플로우 최적화를 포함합니다."
+                        }
+                    }
+                ]
             }
         ]
     }
     </script>
     
     <style>
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --text-color: #333;
+            --bg-color: #f5f7fa;
+            --white: #ffffff;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -153,38 +170,40 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--text-color);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             min-height: 100vh;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 20px;
         }
         
         header {
             background: rgba(255, 255, 255, 0.95);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             margin-bottom: 2rem;
             text-align: center;
         }
         
         h1 {
-            color: #667eea;
-            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-size: 3rem;
             margin-bottom: 0.5rem;
+            font-weight: 700;
         }
         
         .tagline {
-            color: #666;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
+            color: #555;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
         }
         
         .badges {
@@ -196,140 +215,193 @@
         }
         
         .badge {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
             font-size: 0.9rem;
             font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         
         .content {
             background: rgba(255, 255, 255, 0.95);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             margin-bottom: 2rem;
         }
         
+        section {
+            margin-bottom: 4rem;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+        
         h2 {
-            color: #667eea;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
         }
         
         h3 {
-            color: #764ba2;
+            color: var(--secondary-color);
             margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
         }
         
         .services {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
         }
         
         .service-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 1.5rem;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid #e1e8ed;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
         
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-color);
         }
         
         .service-card h3 {
             margin-top: 0;
+            color: var(--primary-color);
         }
         
         ul {
-            margin-left: 1.5rem;
-            margin-top: 0.5rem;
+            margin-left: 1.2rem;
+            margin-top: 1rem;
         }
         
         li {
             margin-bottom: 0.5rem;
+            color: #555;
         }
         
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
         }
         
         .feature {
             background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-color);
+            transition: background 0.3s;
+        }
+
+        .feature:hover {
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         
         .feature strong {
-            color: #667eea;
+            color: var(--primary-color);
             display: block;
             margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
         
         .cta {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             color: white;
-            padding: 2rem;
-            border-radius: 15px;
+            padding: 4rem 2rem;
+            border-radius: 20px;
             text-align: center;
             margin-top: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         
         .cta h2 {
             color: white;
-            margin-top: 0;
+            border-bottom: none;
+            margin-bottom: 1rem;
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
         }
         
         .cta-button {
             display: inline-block;
             background: white;
-            color: #667eea;
-            padding: 1rem 2rem;
-            border-radius: 30px;
+            color: var(--primary-color);
+            padding: 1rem 3rem;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 1rem;
-            transition: transform 0.3s ease;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
         .cta-button:hover {
             transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            background-color: #f8f9fa;
         }
         
         footer {
             text-align: center;
-            color: white;
-            padding: 2rem;
+            color: rgba(255,255,255,0.9);
+            padding: 3rem 0;
             margin-top: 2rem;
         }
         
         footer a {
             color: white;
-            text-decoration: underline;
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(255,255,255,0.5);
+            transition: border-color 0.3s;
+        }
+
+        footer a:hover {
+            border-bottom-color: white;
         }
         
         @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            header {
+                padding: 2rem 1rem;
+            }
+
             h1 {
-                font-size: 1.8rem;
+                font-size: 2.2rem;
             }
             
             .tagline {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
             
-            .services {
+            .content {
+                padding: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .services, .features {
                 grid-template-columns: 1fr;
             }
         }
@@ -353,7 +425,7 @@
                 <h2>About ULION</h2>
                 <p>
                     ULION은 전통적인 검색엔진 최적화(SEO)를 넘어, AI 시대에 맞는 차세대 마케팅 솔루션을 제공합니다. 
-                    Answer Engine Optimization(AEO)와 Generative Engine Optimization(GEO)을 통합하여, 
+                    <strong>Answer Engine Optimization(AEO)</strong>와 <strong>Generative Engine Optimization(GEO)</strong>을 통합하여, 
                     Google 검색부터 ChatGPT, Claude, Gemini 같은 생성형 AI까지 모든 플랫폼에서 귀사의 가시성을 극대화합니다.
                 </p>
             </section>
@@ -461,7 +533,8 @@
         <div class="cta">
             <h2>차세대 마케팅으로 전환하세요</h2>
             <p>AI 시대에 맞는 마케팅 전략이 필요하신가요?<br>ULION이 귀사의 디지털 가시성을 극대화해드립니다.</p>
-            <a href="https://u-li.net" class="cta-button">문의하기</a>
+            <!-- 실제 문의처로 변경하세요 (예: mailto:contact@u-li.net 또는 https://u-li.net/contact) -->
+            <a href="mailto:contact@u-li.net" class="cta-button">문의하기</a>
         </div>
         
         <footer>
