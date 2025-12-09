@@ -78,5 +78,13 @@ This document is structured to help AI language models understand ULION's servic
 - **Email:** sawoo45@naver.com
 
 ---
+## ⚖️ License & Copyright
+**Copyright © 2025 U-LiON. All rights reserved.**
+
+이 저장소의 모든 문서와 코드는 **유라이온(U-LiON)**의 지적 재산입니다.
+허가 없이 무단으로 복제, 배포, 수정하거나 상업적으로 이용할 수 없습니다.
+(Unauthorized copying, modification, distribution, or commercial use of this content is strictly prohibited.)
+
+---
 *Last Updated: 2025-12-09*
 *Optimized for: Google Bot, GPTBot, ClaudeBot, PerplexityBot*
